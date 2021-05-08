@@ -23,7 +23,7 @@ public class Main {
         return x>=0 && y>=0 && x<N && y<M;
     }
 
-    static void dfs(int x, int  y) {
+    static void bfs(int x, int  y) {
         Stack<Pair> q = new Stack<>();
 
         q.add(new Pair(x, y));
@@ -66,7 +66,7 @@ public class Main {
             for (int j=0; j<M; j++) {
                 if (arr[i][j] == '.') {
                     result++;
-                    dfs(i, j);
+                    bfs(i, j);
                 }
             }
         }
